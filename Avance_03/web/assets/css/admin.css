@@ -1,0 +1,199 @@
+/* Importar fuente moderna: Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #1E3A8A;       /* Azul Corporativo */
+    --accent-color: #F97316;        /* Naranja para llamadas a la acción */
+    --text-dark: #1F2937;
+    --text-light: #6B7280;
+    --bg-light: #F3F4F6;
+    --success: #10B981;
+    --danger: #EF4444;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+
+/* --- Navbar Personalizado --- */
+.navbar-custom {
+    background-color: var(--primary-color);
+    padding: 1rem 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.navbar-brand span {
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    font-weight: 500;
+    color: rgba(255,255,255,0.85) !important;
+    transition: all 0.3s;
+    margin: 0 10px;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--accent-color) !important;
+    transform: translateY(-2px);
+}
+
+.btn-logout {
+    border: 1px solid rgba(255,255,255,0.3);
+    color: white;
+    border-radius: 50px;
+    padding: 5px 20px;
+    transition: all 0.3s;
+}
+
+.btn-logout:hover {
+    background: var(--danger);
+    border-color: var(--danger);
+    color: white;
+}
+
+/* --- Hero & Filtros --- */
+.page-header {
+    background: white;
+    padding: 40px 0 20px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.filter-card {
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+/* --- Tarjetas de Vehículos (Premium) --- */
+.car-card {
+    border: none;
+    border-radius: 16px;
+    background: white;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    height: 100%; /* Para que todas midan lo mismo */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.car-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.car-img-wrapper {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+    background: #f1f1f1;
+}
+
+.car-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.car-card:hover .car-img-wrapper img {
+    transform: scale(1.05);
+}
+
+.status-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 5px 12px;
+    border-radius: 30px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.badge-available { background: var(--success); color: white; }
+.badge-rented { background: var(--danger); color: white; }
+.badge-maintenance { background: #F59E0B; color: white; }
+
+.car-body {
+    padding: 20px;
+}
+
+.car-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+}
+
+.car-specs {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+    padding: 10px 0;
+    border-top: 1px solid #f3f4f6;
+    border-bottom: 1px solid #f3f4f6;
+    color: var(--text-light);
+    font-size: 0.85rem;
+}
+
+.car-specs span i {
+    color: var(--accent-color);
+    margin-right: 5px;
+}
+
+.car-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.price-tag {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--text-dark);
+}
+
+.price-tag small {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--text-light);
+}
+
+.btn-rent {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.btn-rent:hover {
+    background-color: #152C6B;
+    color: white;
+}
+
+.btn-rent:disabled {
+    background-color: #9CA3AF;
+    cursor: not-allowed;
+}
+
+/* Footer Moderno */
+.footer-custom {
+    background-color: #111827;
+    color: #9CA3AF;
+    padding: 40px 0;
+    margin-top: 60px;
+    font-size: 0.9rem;
+}
